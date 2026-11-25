@@ -1,0 +1,21 @@
+name = "DegniDriskoOddPrimes"
+version = "0.1.0"
+defaultTargets = ["GrayNecklaces"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.36.0"
+
+# The odd-prime Degni–Drisko theorem. Built by `lake build`.
+[[lean_lib]]
+name = "GrayNecklaces"
+
+# Corollaries, built separately by `lake build Corollaries`. See `corollaries/README.md`.
+[[lean_lib]]
+name = "Corollaries"
+srcDir = "corollaries"
+roots = ["NecklaceGrayCode", "SingleTrack"]
